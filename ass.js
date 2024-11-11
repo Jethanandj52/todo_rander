@@ -14,14 +14,14 @@ function addTask() {
         title: input.value
     });
 
-    taskId++; // Increment ID for the next task
-    input.value = ""; // Clear input field after adding
+    taskId++;    
+    input.value = "";  
     displayTasks();
 }
 
 function displayTasks() {
     var taskList = document.getElementById('taskList');
-    taskList.innerHTML = ""; // Clear the current list
+    taskList.innerHTML = "";  
 
     for (let i = 0; i < tasks.length; i++) {
         var taskDiv = document.createElement('div');
@@ -46,7 +46,7 @@ function displayTasks() {
 }
 
 function removeTask(id) {
-    tasks = tasks.filter(task => task.id !== id); // Remove task from array
+    tasks = tasks.filter(task => task.id !== id);  
     displayTasks();
 }
 
